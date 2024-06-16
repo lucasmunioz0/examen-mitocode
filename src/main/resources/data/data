@@ -1,0 +1,38 @@
+db.getCollection("roles").insertMany([
+    {
+        "_id" : ObjectId("666ca2ac682bfe5f3db877f4"),
+        "nombre" : "ADMIN"
+    },
+    {
+        "_id" : ObjectId("666ca2b5682bfe5f3db877f5"),
+        "nombre" : "USER"
+    }
+]
+)
+////USER DATA
+db.getCollection("usuarios").insertMany([
+    {
+        "_id" : ObjectId("5e01811b6406aa781ce64410"),
+        "username" : "mitocode",
+        "password" : "$2a$10$ju20i95JTDkRa7Sua63JWOChSBc0MNFtG/6Sps2ahFFqN.HCCUMW.",
+        "status" : true,
+        "roles" : [
+            {
+                "_id" : ObjectId("666ca2ac682bfe5f3db877f4")
+            }
+        ]
+    },
+    {
+        "_id" : ObjectId("5e052cd662f50066a04e0460"),
+        "username" : "code",
+        "password" : "$2a$10$ju20i95JTDkRa7Sua63JWOChSBc0MNFtG/6Sps2ahFFqN.HCCUMW.",
+        "status" : true,
+        "roles" : [
+            {
+                "_id" : ObjectId("666ca2b5682bfe5f3db877f5")
+            }
+        ]
+    }
+]
+)
+
